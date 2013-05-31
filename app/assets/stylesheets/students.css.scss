@@ -14,12 +14,12 @@ dark brown:   #332318
 light brown:  #4C2516
 */
 
-html { max-height: 500px;}
-body {max-width: 900px; max-height:400px; margin-left: 100; padding-bottom: 10px;
+html { max-height: 300px;}
+body {max-width: 900px; max-height:200px; margin-left: 100; padding-bottom: 10px;
   font: 14px Verdana,Lucida,Arial,Helvetica,sans-serif; color: #332318; }
 p, td, ul, ol, li, dl, dt, dd { 
   font-family: Verdana,Lucida,Arial,Helvetica,sans-serif; }
-
+.mh {max-height:300px;}
 img { border: none; }
 table {background:#AAFFAA; border:1; border-collapse: collapse; }
 table tr th, table tr td { vertical-align: top; text-align: left; 

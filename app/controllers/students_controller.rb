@@ -18,11 +18,12 @@ class StudentsController < ApplicationController
   
   def create
     # Instantiate a new object using form parameters
-    flash[:notice]="Student Added:"
+    
     @student = Student.new(params[:student])
     # Save the object
     if @student.save
       # If save succeeds, redirect to the list action
+      flash[:notice]="Student Added:"
       redirect_to(:action => 'list')
     else
       # If save fails, redisplay the form so user can fix problems
