@@ -1,15 +1,15 @@
 StudentApp::Application.routes.draw do
   
   root :to => 'students#index'
-  get "students/index"
-  get "students/list"
-  get "students/show"
-  get "students/new"
-  get "students/create"
-  get "students/edit"
-  get "students/update"
-  get "students/delete"
-  get "students/destroy"
+  #get "students/index"
+  #get "students/list"
+  #get "students/show"
+  #get "students/new"
+  #get "students/create"
+  #get "students/edit"
+  #get "students/update"
+  #get "students/delete"
+  #get "students/destroy"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -65,5 +65,5 @@ StudentApp::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end

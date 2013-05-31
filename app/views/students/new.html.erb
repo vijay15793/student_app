@@ -1,11 +1,11 @@
-<%= link_to("<<Back to List", {:action => 'list'} )%>
+<%= link_to("<<Back to List", {:action => 'list'} ,:class => 'back-link')%>
 
 
 	
 <div>
 	<h2>Create Student</h2>
 	
-	<%= form_for(:students, :url => {:action => 'create'}) do |f| %>
+	<%= form_for(:student, :url => {:action => 'create'}) do |f| %>
 	<table >
 		<tr>
 			<th>Name</th>

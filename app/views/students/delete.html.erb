@@ -5,9 +5,9 @@
 <div>
 	<h2>Delete Student</h2>
 	
-	<%= form_for(:students, :url => {:action => 'destroy',:id=> @student.id}) do |f| %>
+	<%= form_for(:student, :url => {:action => 'destroy',:id=> @student.id}) do |f| %>
 	<p>Are you sure to delete??</p>
-	<p>@student.name</p>
+	<p><%=@student.name%></p>
 	<div >
 			<%= submit_tag("Delete Student")%>
 	</div>

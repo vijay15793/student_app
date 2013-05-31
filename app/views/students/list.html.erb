@@ -1,3 +1,8 @@
+<%if !flash[:notice].blank? %>
+<div>
+	<%=flash[:notice]%>
+</div>
+<%end%>
 <div>
 	
 <h2>Students:</h2>
@@ -14,7 +19,7 @@
 		<th>Actions</th>
 		
 	</tr>
-	<% @students.each do |student|%>
+	<% @student.each do |student|%>
 	<tr>
 		<td><%= student.name%></td>
 		<td><%= student.username%></td>
@@ -23,9 +28,9 @@
 		<td><%= student.email%></td>
 		<td><%= student.mobile%></td>
 		<td>
-			<%= link_to("Show",{:action => 'show', :id => subject.id})%>
-			<%= link_to("Edit",{:action => 'edit', :id => subject.id})%>
-			<%= link_to("Delete",{:action => 'delete', :id => subject.id})%>
+			<%= link_to("Show",{:action => 'show', :id => student.id})%>
+			<%= link_to("Edit",{:action => 'edit', :id => student.id})%>
+			<%= link_to("Delete",{:action => 'delete', :id => student.id})%>
 		</td>
 	</tr>
 	<% end %>

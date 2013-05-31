@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
   
   def list
-    @students = Student.order("students.name ASC")
+    @student = Student.order("students.name ASC")
   end
   
   def show
@@ -17,11 +17,16 @@ class StudentsController < ApplicationController
   end
   
   def create
+    # Instantiate a new object using form parameters
+    flash[:notice]="Student Added:"
     @student = Student.new(params[:student])
+    # Save the object
     if @student.save
+      # If save succeeds, redirect to the list action
       redirect_to(:action => 'list')
     else
-      rendr('new')
+      # If save fails, redisplay the form so user can fix problems
+      render('new')
     end
   end
   
@@ -32,9 +37,10 @@ class StudentsController < ApplicationController
   def update
       @student = Student.find(params[:id])
     if @student.update_attributes(params[:student])
-      redirect_to(:action => 'show', :id => @subject.id)
+      flash[:notice]="Student Updated:"
+      redirect_to(:action => 'show', :id => @student.id)
     else
-      rendr('edit')
+      render('edit')
     end
   end
   
@@ -44,6 +50,7 @@ class StudentsController < ApplicationController
   
   def destroy
     Student.find(params[:id]).destroy
+    flash[:notice]="Student Deleted:"
     redirect_to(:action => 'list')
   end
 end
