@@ -1,43 +1,40 @@
-<%if !flash[:notice].blank? %>
-<div>
-	<%=flash[:notice]%>
-</div>
-<%end%>
+<%@page_title="Show" %>
 
 <%= link_to("<<Back to list", {:action => 'list'})%>
-	<div>
-		<h2>Show Student</h2>
-		<table>
+	<div class="leftmargin">
+		<h2 class="leftmargin">Show Student</h2>
+		<br />
+		<table class="leftmargin" border="1">
 			<tr>
-				<th>Name</th>
+				<th class="center">Name</th>
 				<td><%= @student.name %></td>
 			</tr>
 			<tr>
-				<th>Username</th>
+				<th class="center">Username</th>
 				<td><%= @student.username %></td>
 			</tr>
 			<tr>
-				<th>Class</th>
+				<th class="center">Class</th>
 				<td><%= @student.std %></td>
 			</tr>
 			<tr>
-				<th>Section</th>
+				<th class="center">Section</th>
 				<td><%= @student.section%></td>
 			</tr>
 			<tr>
-				<th>Email Id</th>
+				<th class="center">Email Id</th>
 				<td><%= @student.email%></td>
 			</tr>
 			<tr>
-				<th>Mobile No.</th>
+				<th class="center">Mobile No.</th>
 				<td><%= @student.mobile %></td>
 			</tr>
 			<tr>
-				<th>Created</th>
+				<th class="center">Created</th>
 				<td><%= @student.created_at %></td>
 			</tr>
 			<tr>
-				<th>Upadated</th>
+				<th class="center">Upadated</th>
 				<td><%= @student.updated_at %></td>
 			</tr>
 		</table>

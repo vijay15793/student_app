@@ -1,14 +1,17 @@
+<%@page_title="Delete" %>
+
 <%= link_to("<<Back to List", {:action => 'list'} )%>
 
 
 	
-<div>
-	<h2>Delete Student</h2>
+<div class="leftmargin">
+	<h2 class="leftmargin">Delete Student</h2>
+	<br />
 	
 	<%= form_for(:student, :url => {:action => 'destroy',:id=> @student.id}) do |f| %>
-	<p>Are you sure to delete??</p>
-	<p><%=@student.name%></p>
-	<div >
+	<p class="leftmargin">Are you sure to delete??</p>
+	<p class="leftmargin"><%=@student.name%></p>
+	<div class="leftmargin">
 			<%= submit_tag("Delete Student")%>
 	</div>
 	

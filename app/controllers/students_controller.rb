@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+  layout 'school'
   def index
     
   end
