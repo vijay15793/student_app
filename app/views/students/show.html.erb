@@ -1,0 +1,38 @@
+<%= link_to("<<Back to list", {:action => 'list'})%>
+	<div>
+		<h2>Show Student</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<td><%= @student.name %></td>
+			</tr>
+			<tr>
+				<th>Username</th>
+				<td><%= @student.username %></td>
+			</tr>
+			<tr>
+				<th>Class</th>
+				<td><%= @student.class %></td>
+			</tr>
+			<tr>
+				<th>Section</th>
+				<td><%= @student.section%></td>
+			</tr>
+			<tr>
+				<th>Email Id</th>
+				<td><%= @student.email%></td>
+			</tr>
+			<tr>
+				<th>Mobile No.</th>
+				<td><%= @student.mobile %></td>
+			</tr>
+			<tr>
+				<th>Created</th>
+				<td><%= @student.created_at %></td>
+			</tr>
+			<tr>
+				<th>Upadated</th>
+				<td><%= @student.updated_at %></td>
+			</tr>
+		</table>
+	</div>
