@@ -27,6 +27,7 @@ class StudentsController < ApplicationController
       redirect_to(:action => 'list')
     else
       # If save fails, redisplay the form so user can fix problems
+      #render(:partial => 'errors', :locals => {:object => @student}) 
       render('new')
     end
   end
@@ -41,6 +42,7 @@ class StudentsController < ApplicationController
       flash[:notice]="Student Updated:"
       redirect_to(:action => 'show', :id => @student.id)
     else
+      #render(:partial => 'errors', :locals => {:object => @student}) 
       render('edit')
     end
   end

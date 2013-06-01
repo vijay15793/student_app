@@ -14,8 +14,9 @@ dark brown:   #332318
 light brown:  #4C2516
 */
 
-html { max-height: 300px;}
-body {max-width: 900px; max-height:200px; margin-left: 100; padding-bottom: 10px;
+html { max-height: 300px;background-image:url('11.jpg'); background-repeat:repeat-x;background-attachment:fixed;
+background-position:center; }
+body {max-width: 800px; margin-left: 140; padding-bottom: 0px;
   font: 14px Verdana,Lucida,Arial,Helvetica,sans-serif; color: #332318; }
 p, td, ul, ol, li, dl, dt, dd { 
   font-family: Verdana,Lucida,Arial,Helvetica,sans-serif; }
@@ -25,8 +26,8 @@ table {background:#AAFFAA; border:1; border-collapse: collapse; }
 table tr th, table tr td { vertical-align: top; text-align: left; 
   padding: 3px; }
 a, a:visited { color: #993120; }
-a:hover {}
-.leftmargin {margin-left:70px;}
+a:hover {color: #0000AA}
+.leftmargin {margin-left:10px;}
 .rightmargin {margin-right:70px;}
 .clear { clear: both; }
 .center { text-align: center; }

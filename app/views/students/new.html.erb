@@ -5,6 +5,17 @@
 
 	
 <div class="leftmargin">
+	<% if @student && @student.errors.size > 0 %>
+    <div>
+        <h6><%= pluralize(@student.errors.size, "error") %> 
+        prohibited this record from being saved</h6>
+        <p>There were problems with the following fields:</p>
+        <% @student.errors.full_messages.each do |msg| %>
+            <%= msg %><br />
+        <% end %>
+         </div>
+     <% end %>
+      
 	<h2 class="leftmargin">Create Student</h2>
 	<br />
 	<div class="leftmargin">
